@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 420px)"
+      href="./styles/mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 421px) and (max-width: 1024px)"
+      href="./styles/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 1025px)"
+      href="./styles/desktop.css"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>To Do List</title>
+  </head>
+
+  <body class="backgroundColor">
+    <main class="app" id="app">
+      <div class="header-container">
+        <h2 class="myTasks">My Tasks</h2>
+
+        <div class="newTask">
+          <form id="form" class="input-new-task" autocomplete="off">
+            <input
+              type="text"
+              placeholder="Add new task"
+              class="newTask-Text"
+              id="task"
+              name="task"
+            />
+            <input type="image" src="./images/Enter.svg" alt="Submit Form" />
+          </form>
+        </div>
+        <div class="burger pointer" id="burger">
+          <div class="burgerColumns col1"></div>
+          <div class="burgerColumns col2"></div>
+          <div class="burgerColumns col3"></div>
+        </div>
+      </div>
+
+      <div class="sideBar" id="sideBar">
+        <img
+          src="./images/Close.svg"
+          class="closeSideBarBtn"
+          id="closeSideBarBtn"
+        />
+        <h3 class="themeTitle">Theme</h3>
+        <div>
+          <input type="checkbox" class="checkbox" id="checkbox" />
+          <label for="checkbox" class="label">
+            <span class="ball"></span>
+          </label>
+        </div>
+      </div>
+
+      <section class="newTasksWrapper">
+        <ul class="newTasksContainer" id="newTasksContainer"></ul>
+      </section>
+
+      <section class="completedWrapper">
+        <h2 class="completedTitle">Completed</h2>
+
+        <ul class="completedContainer" id="completedContainer"></ul>
+      </section>
+
+      <div class="modal" id="modal">
+        <div class="modalContent" id="modalContent">
+          <img class="closeBtn" id="closeBtn" src="./images/Close.svg" />
+        </div>
+      </div>
+
+      <div class="addTaskContainer" id="addTaskContainer">
+        <div class="addTask" id="addTask">
+          <img id="modalBtn" class="addTask-img" src="./images/Plus.svg" />
+        </div>
+      </div>
+    </main>
+
+    <script src="./scripts/sideBar.js"></script>
+    <script src="./scripts/modal.js"></script>
+    <script src="./scripts/tasks.js"></script>
+  </body>
+</html>
