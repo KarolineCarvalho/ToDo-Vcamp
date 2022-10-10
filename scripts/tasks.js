@@ -21,7 +21,6 @@ function submit(e) {
   if (taskTexT.length > 0) {
     newTasks.push(capitalize(taskTexT));
     orderAndList(newTasks, newTaskContainer);
-    addTaskventListener();
     e.target.children[0].value = "";
   }
 }
@@ -53,12 +52,6 @@ function addTaskventListener() {
   }
 }
 
-function changePlace(item, delList, addList) {
-  const index = delList.findIndex((t) => t === item);
-  delList.splice(index, 1);
-  addList.push(capitalize(item));
-}
-
 //Verifica em qual container a task está
 function checkContainer(e) {
   let container = e.target.parentNode.parentNode;
@@ -78,6 +71,14 @@ function checkContainer(e) {
   orderAndList(completedTasks, comletedTaskContainer);
 }
 
+//Muda item de lista
+function changePlace(item, delList, addList) {
+  const index = delList.findIndex((t) => t === item);
+  delList.splice(index, 1);
+  addList.push(capitalize(item));
+}
+
+//Deixa primeira letra maiúscula
 function capitalize(string) {
   return string[0].toUpperCase() + string.substr(1);
 }
