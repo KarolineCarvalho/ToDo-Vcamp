@@ -34,6 +34,12 @@
   justify-content: space-between;
 }
 
+.formButton {
+  background-color: var(--darkGrey);
+  border: none;
+  cursor: pointer;
+}
+
 .myTasks {
   display: none;
   font-family: "Ubuntu", sans-serif;
@@ -103,6 +109,7 @@
   margin: 0 0 7% 11%;
   font-family: "Ubuntu", sans-serif;
   color: var(--darkerShadow);
+  font-size: clamp(0.5rem, 1.5rem, 2.5rem);
 }
 
 .label {
